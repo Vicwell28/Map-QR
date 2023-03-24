@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QR_Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87i-HD-2qc">
+                                <rect key="frame" x="16" y="59" width="361" height="361"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="87i-HD-2qc" secondAttribute="height" multiplier="1:1" id="hoo-sa-Xj1"/>
+                                </constraints>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCo-jl-CLf">
+                                <rect key="frame" x="16" y="435" width="361" height="50"/>
+                                <color key="backgroundColor" name="DarkTwo"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VCo-jl-CLf" secondAttribute="height" multiplier="361:50" id="MaN-Qo-L71"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Scan QR">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startScanQR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="swE-Di-qpu"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9X-k5-LVx">
+                                <rect key="frame" x="16" y="500" width="171" height="318"/>
+                                <color key="backgroundColor" name="DarkTwo"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYI-K7-iZa">
+                                <rect key="frame" x="206" y="500" width="171" height="318"/>
+                                <color key="backgroundColor" name="DarkTwo"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="DarkOne"/>
+                        <constraints>
+                            <constraint firstItem="VCo-jl-CLf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.918575" id="29X-jh-tD6"/>
+                            <constraint firstItem="VCo-jl-CLf" firstAttribute="top" secondItem="87i-HD-2qc" secondAttribute="bottom" constant="15" id="4eL-L3-WuW"/>
+                            <constraint firstItem="UYI-K7-iZa" firstAttribute="top" secondItem="VCo-jl-CLf" secondAttribute="bottom" constant="15" id="LVt-ly-qUj"/>
+                            <constraint firstItem="UYI-K7-iZa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NtC-tf-96Y"/>
+                            <constraint firstItem="E9X-k5-LVx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Oe5-MC-RHb"/>
+                            <constraint firstItem="E9X-k5-LVx" firstAttribute="leading" secondItem="VCo-jl-CLf" secondAttribute="leading" id="QNT-hv-u91"/>
+                            <constraint firstItem="E9X-k5-LVx" firstAttribute="top" secondItem="VCo-jl-CLf" secondAttribute="bottom" constant="15" id="RF6-cB-tLR"/>
+                            <constraint firstItem="UYI-K7-iZa" firstAttribute="trailing" secondItem="VCo-jl-CLf" secondAttribute="trailing" id="UlM-jn-mx3"/>
+                            <constraint firstItem="87i-HD-2qc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.918575" id="XfK-4x-Isf"/>
+                            <constraint firstItem="87i-HD-2qc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jfP-fb-TaP"/>
+                            <constraint firstItem="E9X-k5-LVx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.435115" id="rql-kS-hbF"/>
+                            <constraint firstItem="UYI-K7-iZa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.435115" id="xj5-Wd-p73"/>
+                            <constraint firstItem="VCo-jl-CLf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y93-I8-p8u"/>
+                            <constraint firstItem="87i-HD-2qc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="z0Z-FS-Cao"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapKit" destination="87i-HD-2qc" id="87x-o8-6Am"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-19.083969465648853" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="DarkOne">
+            <color red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkTwo">
+            <color red="0.12156862745098039" green="0.16078431372549021" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

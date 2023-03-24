@@ -13,6 +13,9 @@
 		C17785D729CB83AE00C32972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17785D529CB83AE00C32972 /* Main.storyboard */; };
 		C17785D929CB83B000C32972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17785D829CB83B000C32972 /* Assets.xcassets */; };
 		C17785DC29CB83B000C32972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17785DA29CB83B000C32972 /* LaunchScreen.storyboard */; };
+		C17785F129CBA74E00C32972 /* IBInspectable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17785F029CBA74E00C32972 /* IBInspectable+Extensions.swift */; };
+		C17785F329CBA78300C32972 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17785F229CBA78300C32972 /* Colors.xcassets */; };
+		C1B896E029CE4E47007E11E7 /* Example_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B896DF29CE4E46007E11E7 /* Example_ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		C17785D829CB83B000C32972 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C17785DB29CB83B000C32972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C17785DD29CB83B000C32972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C17785F029CBA74E00C32972 /* IBInspectable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IBInspectable+Extensions.swift"; sourceTree = "<group>"; };
+		C17785F229CBA78300C32972 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C1B896DF29CE4E46007E11E7 /* Example_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Example_ViewController.swift; path = ../../../../../../Documents/Example_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,114 @@
 		C17785CE29CB83AE00C32972 /* QR-Map */ = {
 			isa = PBXGroup;
 			children = (
+				C17785ED29CBA71000C32972 /* Data */,
+				C17785EB29CBA6FB00C32972 /* Utils */,
+				C17785E829CBA6D700C32972 /* Resources */,
+				C17785E329CBA6A600C32972 /* Application */,
 				C17785CF29CB83AE00C32972 /* AppDelegate.swift */,
 				C17785D129CB83AE00C32972 /* SceneDelegate.swift */,
-				C17785D329CB83AE00C32972 /* ViewController.swift */,
-				C17785D529CB83AE00C32972 /* Main.storyboard */,
-				C17785D829CB83B000C32972 /* Assets.xcassets */,
 				C17785DA29CB83B000C32972 /* LaunchScreen.storyboard */,
 				C17785DD29CB83B000C32972 /* Info.plist */,
 			);
 			path = "QR-Map";
+			sourceTree = "<group>";
+		};
+		C17785E329CBA6A600C32972 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C17785E729CBA6C800C32972 /* Views */,
+				C17785E629CBA6C100C32972 /* ViewModels */,
+				C17785E429CBA6AE00C32972 /* Storyboards */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C17785E429CBA6AE00C32972 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C17785D529CB83AE00C32972 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C17785E629CBA6C100C32972 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C17785D329CB83AE00C32972 /* ViewController.swift */,
+				C1B896DF29CE4E46007E11E7 /* Example_ViewController.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C17785E729CBA6C800C32972 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C17785E829CBA6D700C32972 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C17785EA29CBA6E600C32972 /* Assets */,
+				C17785E929CBA6E000C32972 /* Colors */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C17785E929CBA6E000C32972 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				C17785F229CBA78300C32972 /* Colors.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		C17785EA29CBA6E600C32972 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C17785D829CB83B000C32972 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		C17785EB29CBA6FB00C32972 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C17785EC29CBA70300C32972 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C17785EC29CBA70300C32972 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C17785F029CBA74E00C32972 /* IBInspectable+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C17785ED29CBA71000C32972 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C17785EF29CBA72200C32972 /* Networking */,
+				C17785EE29CBA71A00C32972 /* PersistenStorages */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C17785EE29CBA71A00C32972 /* PersistenStorages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PersistenStorages;
+			sourceTree = "<group>";
+		};
+		C17785EF29CBA72200C32972 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C17785DC29CB83B000C32972 /* LaunchScreen.storyboard in Resources */,
+				C17785F329CBA78300C32972 /* Colors.xcassets in Resources */,
 				C17785D929CB83B000C32972 /* Assets.xcassets in Resources */,
 				C17785D729CB83AE00C32972 /* Main.storyboard in Resources */,
 			);
@@ -139,8 +245,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C17785D429CB83AE00C32972 /* ViewController.swift in Sources */,
+				C17785F129CBA74E00C32972 /* IBInspectable+Extensions.swift in Sources */,
 				C17785D029CB83AE00C32972 /* AppDelegate.swift in Sources */,
 				C17785D229CB83AE00C32972 /* SceneDelegate.swift in Sources */,
+				C1B896E029CE4E47007E11E7 /* Example_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +398,9 @@
 				DEVELOPMENT_TEAM = RG9DD7MR44;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "QR-Map/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Privacy - Location Always and When In Use Usage Description";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Privacy - Location Always Usage Description";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Privacy - Location When In Use Usage Description";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,6 +430,9 @@
 				DEVELOPMENT_TEAM = RG9DD7MR44;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "QR-Map/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Privacy - Location Always and When In Use Usage Description";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Privacy - Location Always Usage Description";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Privacy - Location When In Use Usage Description";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
