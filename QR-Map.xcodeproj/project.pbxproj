@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C16078F029D239F200681125 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16078EF29D239F200681125 /* ScannerViewController.swift */; };
 		C17785D029CB83AE00C32972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17785CF29CB83AE00C32972 /* AppDelegate.swift */; };
 		C17785D229CB83AE00C32972 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17785D129CB83AE00C32972 /* SceneDelegate.swift */; };
 		C17785D429CB83AE00C32972 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17785D329CB83AE00C32972 /* ViewController.swift */; };
@@ -15,10 +16,14 @@
 		C17785DC29CB83B000C32972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17785DA29CB83B000C32972 /* LaunchScreen.storyboard */; };
 		C17785F129CBA74E00C32972 /* IBInspectable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17785F029CBA74E00C32972 /* IBInspectable+Extensions.swift */; };
 		C17785F329CBA78300C32972 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17785F229CBA78300C32972 /* Colors.xcassets */; };
-		C1B896E029CE4E47007E11E7 /* Example_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B896DF29CE4E46007E11E7 /* Example_ViewController.swift */; };
+		C17B2A9C29D499A5001A2A2D /* MotionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B2A9B29D499A5001A2A2D /* MotionViewModel.swift */; };
+		C17B2A9F29D4A51E001A2A2D /* ScannerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B2A9E29D4A51E001A2A2D /* ScannerViewDelegate.swift */; };
+		C17B2AA129D4A545001A2A2D /* MotionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B2AA029D4A545001A2A2D /* MotionDelegate.swift */; };
+		C17B2AA429D4A73B001A2A2D /* CLLocationScanQRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B2AA329D4A73B001A2A2D /* CLLocationScanQRModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C16078EF29D239F200681125 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		C17785CC29CB83AE00C32972 /* QR-Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QR-Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17785CF29CB83AE00C32972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C17785D129CB83AE00C32972 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +34,11 @@
 		C17785DD29CB83B000C32972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C17785F029CBA74E00C32972 /* IBInspectable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IBInspectable+Extensions.swift"; sourceTree = "<group>"; };
 		C17785F229CBA78300C32972 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		C1B896DF29CE4E46007E11E7 /* Example_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Example_ViewController.swift; path = ../../../../../../Documents/Example_ViewController.swift; sourceTree = "<group>"; };
+		C17B2A9A29D495E0001A2A2D /* Example_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example_ViewController.swift; sourceTree = "<group>"; };
+		C17B2A9B29D499A5001A2A2D /* MotionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionViewModel.swift; sourceTree = "<group>"; };
+		C17B2A9E29D4A51E001A2A2D /* ScannerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewDelegate.swift; sourceTree = "<group>"; };
+		C17B2AA029D4A545001A2A2D /* MotionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDelegate.swift; sourceTree = "<group>"; };
+		C17B2AA329D4A73B001A2A2D /* CLLocationScanQRModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationScanQRModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +86,7 @@
 		C17785E329CBA6A600C32972 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				C17B2A9D29D4A4FE001A2A2D /* Protocols */,
 				C17785E729CBA6C800C32972 /* Views */,
 				C17785E629CBA6C100C32972 /* ViewModels */,
 				C17785E429CBA6AE00C32972 /* Storyboards */,
@@ -95,8 +105,7 @@
 		C17785E629CBA6C100C32972 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C17785D329CB83AE00C32972 /* ViewController.swift */,
-				C1B896DF29CE4E46007E11E7 /* Example_ViewController.swift */,
+				C17B2A9B29D499A5001A2A2D /* MotionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -104,6 +113,9 @@
 		C17785E729CBA6C800C32972 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C17785D329CB83AE00C32972 /* ViewController.swift */,
+				C16078EF29D239F200681125 /* ScannerViewController.swift */,
+				C17B2A9A29D495E0001A2A2D /* Example_ViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +164,7 @@
 		C17785ED29CBA71000C32972 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C17B2AA229D4A722001A2A2D /* Models */,
 				C17785EF29CBA72200C32972 /* Networking */,
 				C17785EE29CBA71A00C32972 /* PersistenStorages */,
 			);
@@ -170,6 +183,23 @@
 			children = (
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		C17B2A9D29D4A4FE001A2A2D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C17B2A9E29D4A51E001A2A2D /* ScannerViewDelegate.swift */,
+				C17B2AA029D4A545001A2A2D /* MotionDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C17B2AA229D4A722001A2A2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C17B2AA329D4A73B001A2A2D /* CLLocationScanQRModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,11 +274,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C17B2AA129D4A545001A2A2D /* MotionDelegate.swift in Sources */,
 				C17785D429CB83AE00C32972 /* ViewController.swift in Sources */,
+				C16078F029D239F200681125 /* ScannerViewController.swift in Sources */,
 				C17785F129CBA74E00C32972 /* IBInspectable+Extensions.swift in Sources */,
 				C17785D029CB83AE00C32972 /* AppDelegate.swift in Sources */,
 				C17785D229CB83AE00C32972 /* SceneDelegate.swift in Sources */,
-				C1B896E029CE4E47007E11E7 /* Example_ViewController.swift in Sources */,
+				C17B2A9C29D499A5001A2A2D /* MotionViewModel.swift in Sources */,
+				C17B2A9F29D4A51E001A2A2D /* ScannerViewDelegate.swift in Sources */,
+				C17B2AA429D4A73B001A2A2D /* CLLocationScanQRModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +432,7 @@
 				DEVELOPMENT_TEAM = RG9DD7MR44;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "QR-Map/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Privacy - Camera Usage Description";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Privacy - Location Always and When In Use Usage Description";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Privacy - Location Always Usage Description";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Privacy - Location When In Use Usage Description";
@@ -430,6 +465,7 @@
 				DEVELOPMENT_TEAM = RG9DD7MR44;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "QR-Map/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Privacy - Camera Usage Description";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Privacy - Location Always and When In Use Usage Description";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Privacy - Location Always Usage Description";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Privacy - Location When In Use Usage Description";
