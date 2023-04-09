@@ -30,26 +30,6 @@ class ViewController: UIViewController {
         self.motionViewModel.delegate = self
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-    }
-    
     // MARK: - IBOutlet
     @IBOutlet weak var mapKit: MKMapView!
     
@@ -109,6 +89,11 @@ extension ViewController {
             let route = response.routes[0]
             self.lastMKPolygon = route.polyline
             
+            let rect = route.polyline.boundingMapRect
+            
+            self.mapKit.setRegion(MKCoordinateRegion(rect), animated: true)
+//            self.mapKit.setRegion(MKCoordinateRegion(center: route.polyline.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)), animated: true)
+            
             self.mapKit.addOverlay(self.lastMKPolygon!)
         }
     }
@@ -139,12 +124,22 @@ extension ViewController : ScannerViewDelegate{
 
 extension ViewController : MotionDelegate{
     func didUpdateAcceleromer(x: Double, y: Double, z: Double) {
+
+        let x = round(x * 100000) / 100000
+        let y = round(y * 100000) / 100000
+        let z = round(z * 100000) / 100000
+        
         self.lblAccelerometerColl[0].text = "x: \(x)"
         self.lblAccelerometerColl[1].text = "y: \(y)"
         self.lblAccelerometerColl[2].text = "z: \(z)"
     }
     
     func didUpdateGyro(x: Double, y: Double, z: Double) {
+        
+        let x = round(x * 100000) / 100000
+        let y = round(y * 100000) / 100000
+        let z = round(z * 100000) / 100000
+        
         self.lblGyroscopeColl[0].text = "x: \(x)"
         self.lblGyroscopeColl[1].text = "y: \(y)"
         self.lblGyroscopeColl[2].text = "z: \(z)"
@@ -199,8 +194,6 @@ extension ViewController : CLLocationManagerDelegate {
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        print("func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {")
-        //1
         print(manager.authorizationStatus)
         
         switch manager.authorizationStatus {

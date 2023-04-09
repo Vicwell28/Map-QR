@@ -7,6 +7,7 @@
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -176,6 +177,50 @@
             </objects>
             <point key="canvasLocation" x="-19.083969465648853" y="-27.464788732394368"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zxz-eK-dFm">
+            <objects>
+                <viewController id="7dx-FG-HRU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wcp-vN-jrS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvC-ra-Uxj" customClass="MyCustomView" customModule="QR_Map" customModuleProvider="target">
+                                <rect key="frame" x="76.666666666666686" y="362" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nvC-ra-Uxj" secondAttribute="height" multiplier="15:8" id="d6H-6Q-7pG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7iC-Yw-uTO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nvC-ra-Uxj" firstAttribute="centerX" secondItem="wcp-vN-jrS" secondAttribute="centerX" id="1qw-bC-4fT"/>
+                            <constraint firstItem="nvC-ra-Uxj" firstAttribute="centerY" secondItem="wcp-vN-jrS" secondAttribute="centerY" id="26h-Ta-9YY"/>
+                            <constraint firstItem="nvC-ra-Uxj" firstAttribute="width" secondItem="wcp-vN-jrS" secondAttribute="width" multiplier="0.610687" id="BSN-NZ-QLk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHM-dN-v2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="833" y="-27"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="DarkOne">
@@ -184,5 +229,14 @@
         <namedColor name="DarkTwo">
             <color red="0.12156862745098039" green="0.16078431372549021" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
